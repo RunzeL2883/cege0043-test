@@ -18,3 +18,9 @@ function processDivChange() {
     	}
     }
 }
+
+xhr = new XMLHttpRequest();
+var filename = document.getElementById("filename").value;
+xhr.open("GET", filename, true);
+xhr.onreadystatechange = processDivChange;
+xhr.send();
